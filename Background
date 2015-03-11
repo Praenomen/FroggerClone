@@ -1,0 +1,37 @@
+{
+  //grassy bits at the side of the road
+  fill(18,75,5);
+  rect(0,0,500,75);
+  rect(0,525,500,600);
+  
+  //first set of lane lines
+  fill(255);
+  rect(25,145,75,10);
+  rect(150,145,75,10);
+  rect(275,145,75,10);
+  rect(400,145,75,10);
+  
+  //second set of lane lines
+  rect(25,220,75,10);
+  rect(150,220,75,10);
+  rect(275,220,75,10);
+  rect(400,220,75,10);
+  
+  //middle lane line
+  fill(232,250,0);
+  rect(0,293,500,5);
+  rect(0,302,500,5);
+  
+  //fourth set of lane lines
+  fill(255);
+  rect(25,370,75,10);
+  rect(150,370,75,10);
+  rect(275,370,75,10);
+  rect(400,370,75,10);
+  
+  //last set of lane lines
+  rect(25,445,75,10);
+  rect(150,445,75,10);
+  rect(275,445,75,10);
+  rect(400,445,75,10);
+}
