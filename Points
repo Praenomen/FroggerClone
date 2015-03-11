@@ -1,0 +1,22 @@
+void points() {
+  if (score < 0) {
+  score = 0;
+  }
+  if (score > 999) {
+  score = 999;
+  }
+  textFont(scoreFont, 32);
+  fill(0);
+  if (score > 99) {
+  text(score, 465, 598);
+  }
+  if (9 < score) {
+    if (100 > score) {
+  text(score, 477, 598);
+    }
+  }
+  if (score < 10) {
+  text(score, 490, 598);
+  }
+  fill(255);
+}
