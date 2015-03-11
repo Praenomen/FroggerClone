@@ -1,0 +1,76 @@
+void cars() {
+  noStroke();
+  background(10);
+  
+  //car1
+  fill(carColor[0],carColor[1],carColor[2]);
+  rect(carVar[0],carVar[1],100,50);
+  carVar[0] = carVar[0] - carSpeed[0];
+  if(carVar[0]<-100) {
+    carVar[0] = 510;
+    carSpeed[0] = (int) random(3,7); //sets the car's speed for the next 
+    carColor[0] = (int) random(50,255);
+    carColor[1] = (int) random(50,255);
+    carColor[2] = (int) random(50,255);
+  }
+  
+  //car2
+  fill(carColor[3],carColor[4],carColor[5]);
+  rect(carVar[2],carVar[3],100,50);
+  carVar[2] = carVar[2] - carSpeed[1];
+  if(carVar[2]<-100) {
+    carVar[2] = 510;
+    carSpeed[1] = (int) random(3,7);
+    carColor[3] = (int) random(50,255);
+    carColor[4] = (int) random(50,255);
+    carColor[5] = (int) random(50,255);
+  }
+  
+  //car3
+  fill(carColor[6],carColor[7],carColor[8]);
+  rect(carVar[4],carVar[5],100,50);
+  carVar[4] = carVar[4] - carSpeed[2];
+  if(carVar[4]<-100) {
+    carVar[4] = 510;
+    carSpeed[2] = (int) random(3,7);
+    carColor[6] = (int) random(50,255);
+    carColor[7] = (int) random(50,255);
+    carColor[8] = (int) random(50,255);
+  }
+  
+  //car4
+  fill(carColor[9],carColor[10],carColor[11]);
+  rect(carVar[6],carVar[7],100,50);
+  carVar[6] = carVar[6] + carSpeed[3];
+  if(carVar[6]>510) {
+    carVar[6] = -100;
+    carSpeed[3] = (int) random(3,7);
+    carColor[9] = (int) random(50,255);
+    carColor[10] = (int) random(50,255);
+    carColor[11] = (int) random(50,255);
+  }
+  
+  //car5
+  fill(carColor[12],carColor[13],carColor[14]);
+  rect(carVar[8],carVar[9],100,50);
+  carVar[8] = carVar[8] + carSpeed[4];
+  if(carVar[8]>510) {
+    carVar[8] = -100;
+    carSpeed[4] = (int) random(3,7);
+    carColor[12] = (int) random(50,255);
+    carColor[13] = (int) random(50,255);
+    carColor[14] = (int) random(50,255);
+  }
+  
+  //car6
+  fill(carColor[15],carColor[16],carColor[17]);
+  rect(carVar[10],carVar[11],100,50);
+  carVar[10] = carVar[10] + carSpeed[5];
+  if(carVar[10]>510) {
+    carVar[10] = -100;
+    carSpeed[5] = (int) random(3,7);
+    carColor[15] = (int) random(50,255);
+    carColor[16] = (int) random(50,255);
+    carColor[17] = (int) random(50,255);
+  }
+}
