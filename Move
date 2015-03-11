@@ -1,0 +1,20 @@
+//Movement Commands (WASD)
+
+void move() {
+  if (move[0] == 1) {
+  frogY -= 75;
+  }
+  if (move[1] == 1) {
+    frogX -= 75;
+  }
+  if (move[2] == 1) {
+  frogY += 75;
+  }
+  if (move[3] == 1) {
+    frogX += 75;
+  }
+  move[0] = 0;
+  move[1] = 0;
+  move[2] = 0;
+  move[3] = 0;
+}
