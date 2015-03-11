@@ -1,0 +1,13 @@
+void deathTimerFunc() {
+ if(timerDeath <=0) {
+      move();
+      stay();
+    }
+    if (timerDeath > 0) {
+      timerDeath -= 1;
+    }
+  move[0] = 0;
+  move[1] = 0;
+  move[2] = 0;
+  move[3] = 0;
+}
