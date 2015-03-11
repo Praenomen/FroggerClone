@@ -1,0 +1,22 @@
+void victory() {
+  /**Victory Announcement*/
+  if(frogY <= 55) { 
+  textFont(font, 24);  
+  background(0);    
+  fill(255);
+  textAlign(CENTER);  
+  text("You Win!", width/2, 55);
+  text("Press Space to Keep Playing", width/2, 85);
+  text("Game by Seth DeVries", width/2, 500);
+  ding.play();
+    if (keyPressed) {
+      if(key == ' ') {
+        frogX = 250;
+        frogY = 564;
+        life = 3;
+        score += 1;
+        ding.rewind();
+      }
+    }
+  }
+}
