@@ -1,0 +1,5 @@
+//The Frog
+void frog() {
+  fill(0,200,0);
+  ellipse(frogX,frogY,40,40);
+}
