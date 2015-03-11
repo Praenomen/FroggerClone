@@ -1,0 +1,93 @@
+//Basically, checks to see if the frog-circle-thingy is “touching” one of the car-box-thingys, then reacts appropriately.
+void hitBoxes() {
+  if(carVar[0]<=frogX+20) {
+    if(carVar[0]+100>=frogX-20) {
+      if(carVar[1]<=frogY+20) {
+        if(carVar[1]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+  if(carVar[2]<=frogX+20) {
+    if(carVar[2]+100>=frogX-20) {
+      if(carVar[3]<=frogY+20) {
+        if(carVar[3]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+  if(carVar[4]<=frogX+20) {
+    if(carVar[4]+100>=frogX-20) {
+      if(carVar[5]<=frogY+20) {
+        if(carVar[5]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+  if(carVar[6]<=frogX+20) {
+    if(carVar[6]+100>=frogX-20) {
+      if(carVar[7]<=frogY+20) {
+        if(carVar[7]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+  if(carVar[8]<=frogX+20) {
+    if(carVar[8]+100>=frogX-20) {
+      if(carVar[9]<=frogY+20) {
+        if(carVar[9]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+  if(carVar[10]<=frogX+20) {
+    if(carVar[10]+100>=frogX-20) {
+      if(carVar[11]<=frogY+20) {
+        if(carVar[11]+50>=frogY-20) {
+          frogX=250;
+          frogY=564;
+          life -= 1;
+          score -= 1;
+          timerDeath = 60;
+          splat.rewind();
+          splat.play();
+        }
+      }
+    }
+  }
+}
