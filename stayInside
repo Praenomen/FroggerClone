@@ -1,0 +1,12 @@
+void stay() {
+  //Limits frog location to the size of the game
+  if (frogX >= 500){
+  frogX = 475;
+  }
+  if (frogX <= 0){
+  frogX = 25;
+  }
+  if (frogY >= 600){
+  frogY = 564;
+  }
+}
