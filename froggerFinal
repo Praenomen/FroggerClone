@@ -1,0 +1,103 @@
+/** This is a Frogger clone by Seth DeVries
+It's not exactly original
+but we can play it on school laptops
+so the unoriginality doesn't matter :D */
+
+import ddf.minim.spi.*;
+import ddf.minim.signals.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.ugens.*;
+import ddf.minim.effects.*;
+
+PFont font; //font for the tutorial, loss, victory text
+PFont scoreFont; //font for the score
+PImage img; //image for the heart
+Minim minim;
+AudioPlayer ding;
+AudioPlayer splat;
+AudioPlayer traffic;
+
+//Color Randomizer
+int[] carColor ={(int) random(50,255),(int) random(50,255),(int) random(50,255),(int) random(50,255),(int) random(50,255),
+(int) random(50,255),(int) random(50,2550),(int) random(50,255),(int) random(50,255),(int) random(50,255),
+(int) random(50,255),(int) random(50,255),(int) random(50,255),(int) random(50,255),(int) random(50,255),
+(int) random(50,255),(int) random(50,255),(int) random(50,255)};
+
+//Tutorial Countdown
+int timer = 240;
+
+//Death No Moving Countdown
+int timerDeath = 0;
+
+//Sound Looper
+int timerSound = 2500;
+
+//car x,y
+int[] carVar = {500,84,500,163,500,237,0,313,0,387,0,465};
+
+//car speed
+int[] carSpeed = {7,3,5,4,6,4};
+
+//Frogger Guy Variables
+int frogX = 250;
+int frogY = 564;
+  
+//Lives
+int life=3;
+
+//Movement
+int[] move = {0,0,0,0};
+
+//Score
+int score = 0;
+
+void setup() {
+  size(500,600);
+  font = createFont("Times New Roman", 40, true);
+  scoreFont = loadFont("Numbering.vlw");
+  img = loadImage("NewFroggerHeart.png");
+  minim = new Minim(this);
+  ding = minim.loadFile("Score.mp3");
+  splat = minim.loadFile("Splat.mp3");
+  traffic = minim.loadFile("Traffic.mp3");
+}
+  
+void draw() {
+  tutorial();
+  if (timer <=0) {
+    cars();
+    backDrop();
+    frog();
+    hitBoxes();
+    life();
+    points();
+    victory();
+    lose();
+    deathTimerFunc();
+    traffic.play();
+    timerSound -=1;
+    println(timerSound);
+    if(timerSound <=1) {
+      traffic.rewind();
+      timerSound = 1000;
+    }
+  }
+}
+
+//For some reason my new movement commands really don't like it when you hold the button down, I have no idea why.
+void keyPressed() {
+    if (key == 'w' || key == 'W') {
+    move[0] = 1;
+    }
+    if (key == 'a' || key == 'A') {
+    move[1] = 1;
+    }
+    if (key == 's' || key == 'S') {
+    move[2] = 1;
+    }
+    if (key == 'd' || key == 'D') {
+    move[3] = 1;
+    }
+  }
+
