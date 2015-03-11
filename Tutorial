@@ -1,0 +1,13 @@
+void tutorial() {
+  if(timer >= 0) {
+  textFont(font, 24);
+  background(0);    
+  fill(255);
+  textAlign(CENTER);  
+  text("A Frogger Clone", width/2, 55);
+  text("WASD to move", width/2, 85);
+  text("Please only tap keys, don't hold them", width/2, 115);
+  text("Game by Seth DeVries", width/2, 500);
+  timer -= 1;
+  }
+}
