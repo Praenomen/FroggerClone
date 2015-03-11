@@ -1,0 +1,14 @@
+void life() {
+  if(life == 1) {
+  image(img,0,570,35,32);
+  }
+  if(life == 2) {
+  image(img,0,570,35,32);
+  image(img,40,570,35,32);
+  }
+  if(life == 3) {
+  image(img,0,570,35,32);
+  image(img,40,570,35,32);
+  image(img,80,570,35,32);
+  }
+}
