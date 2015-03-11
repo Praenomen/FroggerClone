@@ -1,0 +1,19 @@
+void lose() {
+  if(life == 0) {
+    textFont(font, 24);
+    background(0);    
+    fill(255);
+    textAlign(CENTER);  
+    text("You Lose :(", width/2, 55);
+    text("Press Space to Restart", width/2, 85);
+    text("Game by Seth DeVries", width/2, 500);
+    frogX = 250;
+    frogY = 564;
+      if (keyPressed) {
+        if(key == ' ') {
+          life = 3;
+          score = 0;
+        }
+      }
+    }
+}
